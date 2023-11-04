@@ -1,4 +1,6 @@
 using HaiderBookStore.DataAccess.Data;
+using HaidersBooks.DataAccess.Repository;
+using HaidersBooks.DataAccess.Repository.IRespository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +36,7 @@ namespace HaiderBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<HaidersBooks.DataAccess.Repository.UnitOfWork, HaidersBooks.DataAccess.Repository.UnitOfWork>();
             services.AddControllersWithViews();
         }
 

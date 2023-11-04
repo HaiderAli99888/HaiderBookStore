@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HaidersBooks.DataAccess.Repository.IRespository
 {
-    interface IUnitOfWork: IDisposable
+    public interface UnitOfWork: IDisposable
     {
         ICategoryRepository Category { get; }
         ISP_Call SP_Call { get; }
