@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HaidersBooks.DataAccess.Repository
 {
-    public class UnitOfWork // make the method public to access the class
+    public class UnitOfWork : IUnitOfWork// make the method public to access the class
     {
         private readonly ApplicationDbContext _db; // the using statement
 

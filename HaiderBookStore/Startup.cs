@@ -36,7 +36,7 @@ namespace HaiderBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<HaidersBooks.DataAccess.Repository.UnitOfWork, HaidersBooks.DataAccess.Repository.UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
         }
 
