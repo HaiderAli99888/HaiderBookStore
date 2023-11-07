@@ -1,6 +1,7 @@
 ﻿using HaiderBookStore.DataAccess.Data;
 using HaidersBooks.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
+//using HaidersBooks.Models.Category;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +56,9 @@ namespace HaidersBooks.DataAccess.Repository
             {
                 return orderBy(query).ToList();
             }
-            return query.ToList();      // returns the IEnumerable based on the conditions of the query
+           // return Enumerable.Empty<T>();
+
+          return query.ToList();      // returns the IEnumerable based on the conditions of the query
         }
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
         {

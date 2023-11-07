@@ -9,5 +9,6 @@ namespace HaidersBooks.DataAccess.Repository.IRespository
     public interface ICategoryRepository : IRepository<Category>
     {
         void Update(CategoryRepository category);
+        void Update(Category category);
     }
 }
