@@ -8,5 +8,7 @@ namespace HaidersBooks.DataAccess.Repository.IRespository
     {
         ICategoryRepository Category { get; }
         ISP_Call SP_Call { get; }
+
+        void Save();
     }
 }
