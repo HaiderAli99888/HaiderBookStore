@@ -44,3 +44,5 @@
 // 2023-10-30 8035 PM Modify Controller and modify viewstart file to the correct path.
 // 2023-10-30 9025 PM Create a new area named 'Admin' and also paste the viewimport and viewstart. Update the path in viewstart.
 // 2023-10-30 9035 PM Delete the conrtroller from new Area 'Admin'.
+// Part 2
+// 2023-11-33 6035 PM Added a new migration in HaidersBooks.DataAccess
