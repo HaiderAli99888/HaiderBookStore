@@ -29,17 +29,33 @@ namespace HaidersBooks.DataAccess.Repository
             // then pass the id as a generic entity which matches the category ID
             var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == category.Id);
 
-            if (objFromDb != null) // save changes if not null
-            {
-                objFromDb.Name = category.Name;
-                _db.SaveChanges();
-            }
+            
         }
 
         public void Update(Category category)
         {
-            throw new NotImplementedException();
+            // Retrieve the existing category from the database
+            var categoryToUpdate = _db.Categories.FirstOrDefault(c => c.Id == category.Id);
+
+            // Check if category exists
+            if (categoryToUpdate != null)
+            {
+                // Update the properties of the existing category with the new values
+                categoryToUpdate.Name = category.Name;
+                categoryToUpdate.Id = category.Id;
+                // ... update other properties as needed
+
+                // Save the changes to the database
+                _db.SaveChanges();
+            }
+            else
+            {
+                // Handle the case when the category is not found
+                // You can throw an exception or handle it in another way depending on your requirements
+                throw new ArgumentException("Category not found");
+            }
         }
+
     }
 
 }

@@ -1,5 +1,4 @@
-﻿
-using HaidersBooks.DataAccess.Repository.IRespository;
+﻿using HaidersBooks.DataAccess.Repository.IRespository;
 using HaidersBooks.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +13,6 @@ namespace HaiderBookStore.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-
         public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -25,62 +23,60 @@ namespace HaiderBookStore.Areas.Admin.Controllers
             return View();
         }
 
-
-        public IActionResult Upsert(int? id)
+        public IActionResult Upsert(int? id) //action method for Upsert
         {
-            Category category = new Category();
+            Category category = new Category(); //using ShalilsBooks.Models
             if (id == null)
             {
-                // This is for create
+                //this is for create
                 return View(category);
             }
-
-            // This is for the edit
-             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
+            //this is for edit
+            category = _unitOfWork.Category.Get(id.GetValueOrDefault());
             if (category == null)
             {
                 return NotFound();
             }
-            return View();
+            return View(category);
         }
 
-        // use HTTP POST to define the post-action method
+        //use HTTP POST to define the post-action method
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(Category category)
         {
+
             if (ModelState.IsValid) // checks all validations in the model (e.g. Name Required) to increase security
             {
                 if (category.Id == 0)
                 {
                     _unitOfWork.Category.Add(category);
-                    _unitOfWork.Save();
                 }
-               else
+                else
                 {
-                   _unitOfWork.Category.Update(category);
-                  }
-        
-        _unitOfWork.Save();
-        return RedirectToAction(nameof(Index)); // to see all the categories
+                    _unitOfWork.Category.Update(category);
+
+                }
+
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index)); //to see all categories
             }
             return View(category);
         }
 
+        // API calls here
         #region API CALLS
-
         [HttpGet]
+
         public IActionResult GetAll()
         {
+            //return NotFound();
             var allObj = _unitOfWork.Category.GetAll();
-            Console.WriteLine("hello");
-            Console.WriteLine(_unitOfWork);
-
             return Json(new { data = allObj });
         }
 
         [HttpDelete]
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.Category.Get(id);
             if (objFromDb == null)

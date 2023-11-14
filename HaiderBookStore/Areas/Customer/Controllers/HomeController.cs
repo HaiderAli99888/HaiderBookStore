@@ -1,4 +1,5 @@
 ﻿using HaiderBookStore.Models;
+using HaiderBookStore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -24,7 +25,7 @@ namespace HaiderBookStore.Area.Customer.Controllers
             return View();
         }
 
-        public IActionResult Category()
+        public IActionResult Privacy()
         {
             return View();
         }
@@ -32,7 +33,7 @@ namespace HaiderBookStore.Area.Customer.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new Models.ViewModels.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
