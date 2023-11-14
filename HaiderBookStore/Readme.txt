@@ -53,7 +53,7 @@
 // 2023-11-03 6050 PM Built the application to confirm no errors.
 // 2023-11-03 7030 PM Reviewed and modified appsettings.json as needed.
 // 2023-11-03 8000 PM Created migrations for database changes and ensured the correct project was set as default.
-// 2023-11-03 8005 PM Added migration name that is category to README.
+// 2023-11-03 8005 PM Added migration name that is 20231103223243_AddDefaultIdentityMigration and 20231103225514_AddCategoryToDb to README.
 // 2023-11-03 8030 PM Reviewed SQL syntax in migration files and noted tables related to ASP.NET Identity.
 // 2023-11-03 8045 PM Updated the database using the Package Manager console and reviewed it in SQL Server Object Explorer.
 // 2023-11-07 5005 PM Added new Category model, created a migration for it, and updated ApplicationDbContext.
