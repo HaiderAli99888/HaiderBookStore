@@ -44,5 +44,30 @@
 // 2023-10-30 8035 PM Modify Controller and modify viewstart file to the correct path.
 // 2023-10-30 9025 PM Create a new area named 'Admin' and also paste the viewimport and viewstart. Update the path in viewstart.
 // 2023-10-30 9035 PM Delete the conrtroller from new Area 'Admin'.
+
+
+
+
 // Part 2
-// 2023-11-33 6035 PM Added a new migration in HaidersBooks.DataAccess
+// 2023-11-03 6035 PM Added a new migration in HaidersBooks.DataAccess
+// 2023-11-03 6050 PM Built the application to confirm no errors.
+// 2023-11-03 7030 PM Reviewed and modified appsettings.json as needed.
+// 2023-11-03 8000 PM Created migrations for database changes and ensured the correct project was set as default.
+// 2023-11-03 8005 PM Added migration name that is category to README.
+// 2023-11-03 8030 PM Reviewed SQL syntax in migration files and noted tables related to ASP.NET Identity.
+// 2023-11-03 8045 PM Updated the database using the Package Manager console and reviewed it in SQL Server Object Explorer.
+// 2023-11-07 5005 PM Added new Category model, created a migration for it, and updated ApplicationDbContext.
+// 2023-11-07 5035 PM Implemented a repository pattern in .DataAccess project for common CRUD operations.
+// 2023-11-07 6009 PM Added IRepository and IRepository.cs interface for CRUD operations on Category class.
+// 2023-11-07 6025 PM Implemented CategoryRepository and ICategoryRepository.
+// 2023-11-07 6050 PM Resolved errors and modified the CategoryRepository implementation.
+// 2023-11-08 3015 PM Built the project, fixed errors, and pushed commits to GitHub.
+// 2023-11-08 3035 PM Implemented stored procedure repository and mapped multiple repositories in a Unit of Work.
+// 2023-11-10 1051 PM Added new interface ISP_Call.cs and implemented it in a new class.
+// 2023-11-10 2038 PM Updated database connection and implemented ISP_Call interface.
+// 2023-11-10 2055 PM Implemented Unit of Work pattern, added IUnitOfWork interface, and updated Startup.cs.
+// 2023-11-12 6000 PM Added Category CRUD functionality in new MVC Controller within Admin area.
+// 2023-11-12 6017 PM Modified Index.cshtml for Category, adding JavaScript and confirming functionality.
+// 2023-11-13 6035 PM Implemented Upsert POST action method in CategoryController and resolved errors.
+// 2023-11-13 9010 PM Added API call for HTTPDelete in CategoryController and implemented deletion functionality.
+// 2023-11-13 9030 PM Checked application for errors, tested functionality, updated README, and pushed to GitHub.
