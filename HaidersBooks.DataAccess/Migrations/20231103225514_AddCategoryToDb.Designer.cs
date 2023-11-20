@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HaidersBooks.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231106175021_AddCategoryToDb")]
+    [Migration("20231103225514_AddCategoryToDb")]
     partial class AddCategoryToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -221,7 +221,7 @@ namespace HaidersBooks.DataAccess.Migrations
                 b.ToTable("AspNetUserTokens");
             });
 
-            modelBuilder.Entity("ShalilsBooks.Models.Category", b =>
+            modelBuilder.Entity("HaidersBooks.Models.Category", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
