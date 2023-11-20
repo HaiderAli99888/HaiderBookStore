@@ -1,5 +1,6 @@
 ﻿using HaiderBookStore.DataAccess.Data;
 using HaidersBooks.DataAccess.Repository.IRepository;
+using HaidersBooks.Models;
 using Microsoft.EntityFrameworkCore;
 //using HaidersBooks.Models.Category;
 using System;
@@ -87,6 +88,25 @@ namespace HaidersBooks.DataAccess.Repository
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbSet.RemoveRange(entity);
+        }
+        public void Update(Product product)
+        {
+            var objFromDb = _db.Products.FirstOrDefault(s => s.Id == product.Id);
+            if (objFromDb != null)
+            {
+                if (product.ImageUrl != null)
+                {
+                    objFromDb.ImageUrl = product.ImageUrl;
+                }
+                objFromDb.ISBN = product.ISBN;
+                objFromDb.ListPrice = product.ListPrice;
+                objFromDb.Title = product.Title;
+                objFromDb.Description = product.Description;
+                objFromDb.CategoryId = product.CategoryId;
+                objFromDb.Author = product.Author;
+                objFromDb.CoverTypeId = product.CoverTypeId;
+
+            }
         }
     }
 }
