@@ -71,3 +71,38 @@
 // 2023-11-13 6035 PM Implemented Upsert POST action method in CategoryController and resolved errors.
 // 2023-11-13 9010 PM Added API call for HTTPDelete in CategoryController and implemented deletion functionality.
 // 2023-11-13 9030 PM Checked application for errors, tested functionality, updated README, and pushed to GitHub.
+
+
+
+// Part 3 - Section 1
+// 2023-11-20 7030 AM Created Cover Type CRUD with methods used for Category CRUD.
+// 2023-11-20 7045 AM Added CoverType.cs in the Model’s folder with ID and Name properties.
+// 2023-11-20 8015 AM Added CoverType to the Repository including CoverTypeRepository Class and ICoverTypeRepository Interface.
+// 2023-11-20 8030 AM Included CoverType in UnitOfWork and IUnitOfWork.
+// 2023-11-20 8049 AM Pushed CoverType to the Database Created migration 20231120084913_addCoverTypeToDb and updated the DB.
+// 2023-11-20 8052 AM Added Cover Type to NavBar.
+// 2023-11-20 9000 AM Created CoverType Controller with all required Action Methods.
+// 2023-11-20 6005 PM Implemented Cover Type Index View to use DataTables.
+// 2023-11-20 6010 PM Created Cover Type Upsert View for creating and updating CoverType.
+// 2023-11-20 6013 PM Implemented delete CoverType functionality using API Call.
+// 2023-11-20 6018 PM Added a new class Product in the .Models project.
+// 2023-11-20 7024 PM Built the blueprint of Product class, making it public and resolving errors.
+// 2023-11-20 7030 PM Updated ApplicationDbContext.cs file with reference to the new Products.
+// 2023-11-20 7035 PM Ran add-migration command for 'addProductToDb' migration which created 20231120193505_addProductToDb and updated database.
+// 2023-11-20 7037 PM Reviewed the newly created Products table in SQL Server Object Explorer.
+// 2023-11-20 7039 PM Updated Product class, added [Required] to Title, ISBN, and Author, created new migration addValidationToProduct which
+                      created 20231120193940_addValidationToProduct and updated the database.
+// 2023-11-20 8030 PM Added Product to the Repository including IProductRepository Interface and ProductRepository Class.
+// 2023-11-20 8035 PM Included Product in UnitOfWork and IUnitOfWork.
+// 2023-11-20 9003 PM Built the project, checked for errors, resolved them, and pushed to GitHub.
+
+// Part 3 - Section 2
+// 2023-11-20 9004 PM Added Product Controller in Areas > Admin > Controllers to perform CRUD operations.
+// 2023-11-20 9010 PM Included IWebHostEnvironment call and its using statement to the Microsoft.AspNetCore.Hosting in the ProductController method.
+// 2023-11-20 9015 PM Created a ViewModel in the Models project to hold the Product object and select list for Category and CoverType.
+// 2023-11-20 9019 PM Modified the ProductVM class to be public and installed the Microsoft.AspNetCore.Mvc.ViewFeatures package.
+// 2023-11-20 9025 PM Modified the ProductController so the IActionResult Upsert calls to the ProductVM view model include the using statements to the ViewModels folder and Microsoft.AspNetCore.Mvc.Rendering.
+// 2023-11-20 9030 PM Modified the API call to include the Category and CoverType properties.
+// 2023-11-20 9040 PM Added an Index view for Product, copying the Index.cshtml code from Views/Category and modifying it for the Product List. Added properties like Title, ISBN, Price, Author, Category, and referenced a new product.js file.
+// 2023-11-20 9050 PM Copied and pasted category.js, renamed it to product.js (modified the URL to point to Product).
+// 2023-11-20 1000 PM Modified the _Layout.cshtml to add a new link to Product. Ran the application and continued through any exceptions.
