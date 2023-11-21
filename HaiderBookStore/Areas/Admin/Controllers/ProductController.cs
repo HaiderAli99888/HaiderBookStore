@@ -59,7 +59,6 @@ namespace HaiderBookStore.Areas.Admin.Controllers
         }
         // return View(product)
 
-
         // API calls here
         #region API CALLS
         [HttpGet]

@@ -21,7 +21,7 @@ namespace HaidersBooks.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BulkyBook.Models.Category", b =>
+            modelBuilder.Entity("HaiderBooks.Models.Category", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace HaidersBooks.DataAccess.Migrations
                 b.ToTable("Categories");
             });
 
-            modelBuilder.Entity("BulkyBook.Models.CoverType", b =>
+            modelBuilder.Entity("HaidersBooks.Models.CoverType", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -55,7 +55,7 @@ namespace HaidersBooks.DataAccess.Migrations
                 b.ToTable("CoverTypes");
             });
 
-            modelBuilder.Entity("BulkyBook.Models.Product", b =>
+            modelBuilder.Entity("HaidersBooks.Models.Product", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -307,15 +307,15 @@ namespace HaidersBooks.DataAccess.Migrations
                 b.ToTable("AspNetUserTokens");
             });
 
-            modelBuilder.Entity("BulkyBook.Models.Product", b =>
+            modelBuilder.Entity("HaidersBooks.Models.Product", b =>
             {
-                b.HasOne("BulkyBook.Models.Category", "Category")
+                b.HasOne("HaidersBooks.Models.Category", "Category")
                     .WithMany()
                     .HasForeignKey("CategoryId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
 
-                b.HasOne("BulkyBook.Models.CoverType", "CoverType")
+                b.HasOne("HaidersBooks.Models.CoverType", "CoverType")
                     .WithMany()
                     .HasForeignKey("CoverTypeId")
                     .OnDelete(DeleteBehavior.Cascade)
