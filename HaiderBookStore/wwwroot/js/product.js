@@ -3,7 +3,7 @@
 $(document).ready(function () {
     loadDataTable();
 });
-
+// made the changes to the javascript file of product and added the reamaning required refereneces
 function loadDataTable() {
     dataTable = $('#tblData').DataTable({
         "ajax": {
