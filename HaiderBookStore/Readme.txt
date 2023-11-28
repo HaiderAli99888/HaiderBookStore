@@ -106,3 +106,15 @@
 // 2023-11-20 9040 PM Added an Index view for Product, copying the Index.cshtml code from Views/Category and modifying it for the Product List. Added properties like Title, ISBN, Price, Author, Category, and referenced a new product.js file.
 // 2023-11-20 9050 PM Copied and pasted category.js, renamed it to product.js (modified the URL to point to Product).
 // 2023-11-20 1000 PM Modified the _Layout.cshtml to add a new link to Product. Ran the application and continued through any exceptions.
+
+// Part 4
+// 2023-11-27 8028 PM Removed the unnecessary spacing in product controller that was existing between CoverType and Category Getall method.
+// 2023-11-27 8049 PM Return view for product added for getting the required results from the product VM that was created as a part to return CoverType and Category for Product.
+// 2023-11-27 9025 PM ProductVM updated with Ctaegory and CoveraType to retun views to back to the upsert that would the Admin Category and CoverType.
+// 2023-11-27 9049 PM Updated the API Calls to make that GetAll pulls the the right functions to Edit and Delete the enteries from database.
+// 2023-11-27 1005 PM Made the changes to the javascript file of product and added the reamaning required refereneces.
+// 2023-11-27 1018 PM Added the right actions in index.cshtml of product and made the external files excessable to it to get the right view on admins index page.
+// 2023-11-27 1018 PM Changed the CategoryId to CoverTypeId to make the CoverType easily accessable by the product upsert for Admin.
+// 2023-11-27 1026 PM Added the first entry to the product database and added the image in product folder as well for the home page.
+// 2023-11-27 1037 PM Completed the requirered three enteries to the database for the homepage, so the user can see the populated database.
+// 2023-11-27 1106 PM Edited the index page for the customer to make the final appearance different than that of the bulkybook the store provided by professor.
