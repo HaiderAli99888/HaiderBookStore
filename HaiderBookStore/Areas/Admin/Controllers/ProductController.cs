@@ -58,7 +58,7 @@ namespace HaiderBookStore.Areas.Admin.Controllers
             }
             return View(productVM);
         }
-
+        // Return view for product added by getting the required results from the product VM that was created as a part to return CoverType and Category for Product
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(ProductVM productVM)
