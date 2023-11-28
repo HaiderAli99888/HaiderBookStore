@@ -26,14 +26,14 @@ namespace HaidersBooks.DataAccess.Repository
                 {
                     objFromDb.ImageUrl = product.ImageUrl;
                 }
-                objFromDb.ISBN = product.ISBN;
-                objFromDb.ListPrice = product.ListPrice;
+
                 objFromDb.Title = product.Title;
                 objFromDb.Description = product.Description;
-                objFromDb.CategoryId = product.CategoryId;
+                objFromDb.ISBN = product.ISBN;
                 objFromDb.Author = product.Author;
+                objFromDb.ListPrice = product.ListPrice;
+                objFromDb.CategoryId = product.CategoryId;
                 objFromDb.CoverTypeId = product.CoverTypeId;
-
             }
         }
     }

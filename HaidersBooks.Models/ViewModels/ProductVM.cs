@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace HaidersBooks.Models.ViewModels
 {
     public class ProductVM

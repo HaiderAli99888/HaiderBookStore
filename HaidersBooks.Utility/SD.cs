@@ -6,5 +6,6 @@ namespace HaidersBooks.Utility
 {
     public static class SD
     {
+
     }
 }
