@@ -13,6 +13,7 @@
             // edit
             title = "Edit Product";
             <input type="hidden" asp-for="Product.Id" />
+            // Changed the CategoryId to CoverTypeId to make the CoverType easily accessable by the product upsert for Admin
         }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
